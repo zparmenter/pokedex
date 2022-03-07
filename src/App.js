@@ -5,10 +5,8 @@ import './App.css';
 export default function RandomUser() {
   const [count, setCounter] = useState(0);
   const [pokemon, setPokemon] = useState([]);
-  const [sprite, setSprite] = useState(0);
   const [clickedImage, setClickedImage] = useState('')
-  const [hoverImage, setHoverImage] = useState('')
-  const [activeImage, setActiveImage] = useState(clickedImage)
+  
   // const [loading, setLoading] = useState(true);
 
   function spriteUrl(value) {
@@ -21,7 +19,6 @@ export default function RandomUser() {
     const info = data.results;
     console.log(info);
     setPokemon(info);
-    setSprite(sprite + 1)
   }, []);
 
 
